@@ -1,0 +1,41 @@
+.body{
+ background-color: white;
+ display: flex;
+ flex-direction: row;
+}
+
+.formulario{
+    width: 50%;
+    font-size: 15px;
+    padding: 12px 20px;
+    margin: 14px;
+    margin-left: 100px;
+    background-color: #c18845;
+    border-color: #544a41;
+    border-style: outset;
+}
+
+input , .area{
+   padding: 8px;
+   border: 2px solid gray;
+   border-radius: 2px;
+   background-color: #E6E6FA;
+}
+
+.logo{
+   float: right;
+   display: flex;
+   margin: 5%;
+   margin-left: 160px;
+   width: 50%;
+}
+
+.Wpp{
+  height: 15%;
+  flex-direction: column;
+  margin-bottom: 20px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Copperplate", fantasy;
+}

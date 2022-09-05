@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Refresh" content="5; url=https://the-prime-barber.000webhostapp.com/index.php"/>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "M PLUS 2", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-weight: 500;
+  padding: 15px 50px;
+  font-size: 20px;
+  background-color: #c18845;
+  color: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 2px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover{
+    background-color: #544a41;
+    transition: 0.7s;
+}
+
+.message {
+  font-size: 20px;
+  padding: 20px 60px;
+  position: fixed;
+  top: 20px;
+  right: 105px;
+  background-color: #000000;
+  border-radius: 5px;
+  color: #998675;
+  animation: slidein 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.message::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: #998675;
+  animation: time 7s forwards;
+}
+@keyframes time {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="alert"></div>
+    <button>Enviar</button>
+    <script>
+        const btn = document.querySelector("button");
+const divMessage = document.querySelector(".alert");
+
+const msg = "Mensagem enviada!";
+
+function ativar(msg) {
+  const message = document.createElement("div");
+  message.classList.add("message");
+  message.innerText = msg;
+  divMessage.appendChild(message);
+
+  setTimeout(() => {
+    message.style.display = "none";
+  }, 7000);
+}
+
+btn.addEventListener("click", () => {
+  ativar(msg);
+});
+    </script>
+</body>
+</html>
